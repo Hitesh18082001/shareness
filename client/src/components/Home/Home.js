@@ -2,6 +2,7 @@ import React from 'react'
 import Banner from './Banner.js'
 import Categories from './Categories';
 import { Grid } from '@mui/material';
+import Posts from './Post/Posts.js'
 const Home=()=> {
   return (<>
     <Banner />
@@ -10,7 +11,9 @@ const Home=()=> {
             <Categories />
         </Grid>
         <Grid container item xs={12} sm={10} lg={10}>
+           <Posts/>
         </Grid>
+        
     </Grid>
 </>
   )

@@ -89,7 +89,7 @@ const Login=()=> {
             .then(response=>{ 
                 console.log(response.data);
                console.log("dispathcer hit");
-               dispatch(signInUser(login));
+               dispatch(signInUser(response.data.user));
             //    togglePage('signup');
                setError('');
                sessionStorage.setItem('accessToken',`Bearer ${response.data.accessToken}`);

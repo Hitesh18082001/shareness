@@ -34,7 +34,7 @@ export const userSignin=async(req,res)=>{
                 const refreshToken=jwt.sign(user.toJSON(),process.env.REFRESH_SECRET_KEY);
                 const newToken=new Token({token:refreshToken});
                 await newToken.save();
-                return res.status(200).json({accessToken:accessToken,refreshToken:refreshToken, msg:'Logged in succesfully',success:true});
+                return res.status(200).json({accessToken:accessToken,refreshToken:refreshToken, msg:'Logged in succesfully',success:true,user:user});
             }
             else{
                 return res.status(400).json({msg:'user not found',success:false});

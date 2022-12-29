@@ -33,7 +33,7 @@ const Categories = () => {
     return (
         <>
             <Link to={'/createpost'} style={{ textDecoration: 'none' }}>
-                <StyledButton variant="contained">Create Blog</StyledButton>
+                <StyledButton variant="contained">Add Experience</StyledButton>
             </Link>
             
             <StyledTable>
